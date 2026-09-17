@@ -1,1 +1,15 @@
+# snipman — dependency manifest (deliberately tiny)
 
+bash        (4.0+)   required
+coreutils            required — awk, grep, sed, mktemp, date, nl
+
+# OPTIONAL (for clipboard copy — script auto-detects which exists):
+xclip       Linux X11 clipboard
+wl-copy     Linux Wayland clipboard
+pbcopy      macOS clipboard
+clip.exe    Windows/WSL clipboard
+
+# OPTIONAL (editor — falls back to nano):
+nano / vim / any $EDITOR
+
+# Storage: plain TSV file at ~/.snipman/ — no database, no network, no cloud.
